@@ -1,0 +1,75 @@
+﻿body {
+    background-color: #f1f1f1 !important;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+    color: black;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    padding-top:0px;
+}
+
+.title{
+    padding:25px;
+    color:black;
+}
+
+.header {
+    border: 0px solid #ccc !important;
+    background-color: #F5F5F5;
+    padding: 25px;
+    box-shadow: rgba(50, 50, 93, 0.1) 5px 25px 35px, rgba(0, 0, 0, 0.07) 0px 0px 5px;
+}
+
+.actions {
+    padding: 20px;
+    /* background-color: #fbf068; */
+    /* color: white; */
+    border-bottom: 1px solid gainsboro;
+}
+
+
+.menu {
+    padding:25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    text-decoration: none
+}
+
+.menu:active{
+    border-bottom:1px solid black;
+}
+
+.h_title {
+    padding: 25px;
+    border-bottom: 1px solid #dedede;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.h_content {
+    padding: 25px;
+    margin-bottom: 15px;
+}
+
+    .h_content div {
+        padding-bottom: 5px;
+    }
+
+.h_item {
+    padding: 10px;
+}

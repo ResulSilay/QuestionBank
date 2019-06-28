@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - QuestionBank</title>
+
+    <environment include="Development">
+        <link href="~/css/material.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/admin.css" />
+    </environment>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="w3-bar w3-border header">
+                <a class="w3-bar-item w3-button logo menu">Q B</a>
+                <a href="/User/Index" class="w3-bar-item w3-button menu">Index</a>
+                <a href="/User/Questions" class="w3-bar-item w3-button w3-light-grey menu">Questions</a>
+                <a href="/User/Buggy" class="w3-bar-item w3-button menu">Buggy</a>
+                <a href="/Connect/Profile" class="w3-bar-item w3-button w3-hide-small menu">Profil</a>
+                <a href="/Connect/Logout" class="w3-bar-item w3-button w3-hide-small menu">Exit</a>
+
+                <button type="button" class="mdl-chip" style="background-color:#dcdcdc;float:right; margin-left:5px;">
+                    <span class="mdl-chip__text"><a asp-controller="Home" asp-action="Questions_Insert">Question</a></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="box">@RenderBody()</div>
+</body>
+</html>
+

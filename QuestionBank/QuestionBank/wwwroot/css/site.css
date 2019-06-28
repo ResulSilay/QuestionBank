@@ -1,0 +1,166 @@
+﻿body {
+    /*padding-bottom: 20px;*/
+}
+
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 65px;
+    color: black;
+}
+
+.logo_layout {
+    font-family: 'Monoton', cursive;
+    font-size: 35px;
+    color: black;
+}
+
+.title {
+    font-size: 45px;
+    margin: 0;
+    font-family: 'Carter One', cursive;
+    font-family: 'Chewy', cursive;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Sriracha', cursive;
+    font-family: 'Sniglet', cursive;
+    font-family: 'Faster One', cursive;
+    font-family: 'Proza Libre', sans-serif;
+    line-height: 44px;
+    color: black;
+}
+
+.slider {
+    background: repeating-radial-gradient(circle, white, rgb(241, 241, 241) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px);
+    height: 555px;
+    /*box-shadow: rgba(50, 50, 93, 0.1) 5px 2px 20px, rgba(0, 0, 0, 0.07) 0px 0px 5px;*/
+    display: block;
+    background: repeating-radial-gradient(circle, white, rgba(241, 241, 241, 0.34) 30px, rgb(255, 255, 255) 1px, rgb(255, 255, 255) 1px);
+    border-bottom: 1px solid #e4e4e48c;
+}
+
+.header_layout {
+    background: repeating-radial-gradient(circle, white, rgb(241, 241, 241) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px);
+    background: repeating-radial-gradient(circle, white, rgba(241, 241, 241, 0.34) 30px, rgb(255, 255, 255) 1px, rgb(255, 255, 255) 1px);
+    height: 200px;
+    border-bottom: 1px solid #ededf1;
+}
+
+.lectures {
+    background-color: white;
+    height: 500px;
+    padding: 100px;
+    padding-top: 0px;
+}
+
+.library {
+    background: linear-gradient(#00ff89ed,#00ff89ed),url(https://cdn5.vectorstock.com/i/1000x1000/54/69/library-book-shelves-book-box-vector-13375469.jpg);
+    background: linear-gradient(#f9d474,#fdea61ed),url(https://cdn5.vectorstock.com/i/1000x1000/54/69/library-book-shelves-book-box-vector-13375469.jpg);
+    background: linear-gradient(#f9d474e0,#fdea61eb),url(https://cdn5.vectorstock.com/i/1000x1000/54/69/library-book-shelves-book-box-vector-13375469.jpg);
+}
+
+
+.content {
+    top: -200px;
+    position: relative;
+}
+
+.layout {
+    background-color: white;
+    margin: 100px;
+    box-shadow: rgba(50, 50, 93, 0.1) 5px 25px 35px, rgba(0, 0, 0, 0.07) 0px 0px 5px;
+}
+
+.search {
+    border-radius: 30px;
+    background-color: white;
+    border: solid 1px #38383840;
+    /* height: auto; */
+    box-shadow: rgba(50, 50, 93, 0.1) 5px 5px 15px, rgba(0, 0, 0, 0.07) 0px 0px 5px;
+    width: 455px;
+    padding: 19px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: Roboto, cursive;
+}
+
+.box {
+    /*width: 70px;
+    */ text-align: center;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #000000;
+    font-family: roboto;
+    float: left;
+    padding: 20px;
+    margin: 20px;
+    font-size: 15px;
+    text-align: center;
+    /* 
+    border-radius: 5px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.1), 0 1px 10px 0 rgba(0,0,0,.12);*/
+}
+
+.h_content {
+    padding: 25px;
+}
+
+.h_item {
+    margin-bottom: 25px;
+}
+
+.m_title {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 35px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Sail', cursive;
+    font-family: 'Nova Script', cursive;
+    font-family: 'Nova Oval', cursive;
+    font-family: 'Srisakdi', cursive;
+    font-family: 'Playball', cursive;
+    font-weight: 400;
+}
+
+.m_title_two {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 35px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Sail', cursive;
+    font-family: 'Nova Script', cursive;
+    font-family: 'Nova Oval', cursive;
+    font-family: 'Srisakdi', cursive;
+    font-family: 'Playball', cursive;
+    font-weight: 400;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

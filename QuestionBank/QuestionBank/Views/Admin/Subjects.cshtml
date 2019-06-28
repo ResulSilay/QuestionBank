@@ -1,0 +1,64 @@
+﻿@model IEnumerable<QuestionBank.Models.Subjects>
+
+@{
+    ViewData["Title"] = "Subjects";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="actions">
+    <a asp-action="Lectures_Create">Subjects</a>
+</div>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datetime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datetime)
+                </td>
+                <td>
+                    @if (item.Status == 1)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">On</span>
+                        </span>
+                    }
+                    @if (item.Status == 0)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Off</span>
+                        </span>
+                    }
+
+                </td>
+                <td>
+                    <a asp-action="Questions_Tests" asp-route-subject_id="@item.Id" asp-route-lecture_id="@item.LectureId">Tests</a> | <a asp-action="Questions_Corrects" asp-route-subject_id="@item.Id" asp-route-lecture_id="@item.LectureId">Corrects</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

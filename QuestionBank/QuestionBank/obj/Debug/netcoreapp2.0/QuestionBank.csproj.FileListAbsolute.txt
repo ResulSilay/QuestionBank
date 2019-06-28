@@ -1,0 +1,11 @@
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\bin\Debug\netcoreapp2.0\QuestionBank.deps.json
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\bin\Debug\netcoreapp2.0\QuestionBank.runtimeconfig.json
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\bin\Debug\netcoreapp2.0\QuestionBank.runtimeconfig.dev.json
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\bin\Debug\netcoreapp2.0\QuestionBank.dll
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\bin\Debug\netcoreapp2.0\QuestionBank.pdb
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.csprojAssemblyReference.cache
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.csproj.CoreCompileInputs.cache
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.AssemblyInfoInputs.cache
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.AssemblyInfo.cs
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.dll
+C:\Users\Dell-07\Documents\Dosyalarim\Projects\Web\QB\QuestionBank\QuestionBank\obj\Debug\netcoreapp2.0\QuestionBank.pdb

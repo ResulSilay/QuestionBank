@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<div class="layout_register" style="width:555px">
+    <div class="box" style="padding:0px">
+        <div style="padding:20px;padding-bottom:5px;background-color:white;text-align:center;color:black;">
+            <div class="logo" style="padding:35px">Q B</div><h6>Sisteme kayıt yapın.</h6>
+            <div class="warning">
+                @ViewBag.warningMessage
+            </div>
+        </div>
+        <div style="padding:20px;">
+            @using (Html.BeginForm("Register", "Home", FormMethod.Post, null))
+            {
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="username">
+                    <label class="mdl-textfield__label" for="sample3">Kullanıcı Adı</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="password" name="password">
+                    <label class="mdl-textfield__label" for="sample3">Şifre</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="email" name="email">
+                    <label class="mdl-textfield__label" for="sample3">e-Posta</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="tel">
+                    <label class="mdl-textfield__label" for="sample3">Telefon</label>
+                </div>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" name="address">
+                    <label class="mdl-textfield__label" for="sample3">Adres</label>
+                </div>
+                <br /><br />
+                <br />
+                <div>
+                    <input id="Submit1" type="submit" value="KAYIT OL" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

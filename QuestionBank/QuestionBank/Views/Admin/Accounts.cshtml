@@ -1,0 +1,97 @@
+﻿@model IEnumerable<QuestionBank.Models.Accounts>
+
+@{
+    ViewData["Title"] = "Accounts";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="actions">
+    <a asp-action="Lectures_Create">Accounts</a>
+</div>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VipDatetime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @if (item.Vip == 0)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">No</span>
+                        </span>
+                    }
+                    @if (item.Vip == 1)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Yes</span>
+                        </span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VipDatetime)
+                </td>
+                <td>
+                    @if (item.Type == 1)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Admin</span>
+                        </span>
+                    }
+                    @if (item.Type == 2)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">User</span>
+                        </span>
+                    }
+                </td>
+                <td>
+                    @if (item.Status == 0)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">Off</span>
+                        </span>
+                    }
+                    @if (item.Status == 1)
+                    {
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">On</span>
+                        </span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Accounts_Edit" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

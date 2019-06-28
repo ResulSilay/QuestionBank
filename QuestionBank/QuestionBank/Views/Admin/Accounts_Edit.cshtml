@@ -1,0 +1,90 @@
+﻿@model QuestionBank.Models.Accounts
+
+@{
+    ViewData["Title"] = "Accounts_Edit";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="actions">
+    <a asp-action="Lectures_Create">Account Details</a>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Accounts_Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="h_item">
+                <label asp-for="Username" class="mdl-chip__text"></label>
+                <input asp-for="Username" class="mdl-textfield__input" readonly="readonly" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="h_item">
+                <label asp-for="Email" class="mdl-chip__text"></label>
+                <input asp-for="Email" class="mdl-textfield__input" readonly="readonly" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="h_item">
+                <label asp-for="Address" class="mdl-chip__text"></label>
+                <input asp-for="Address" class="mdl-textfield__input" readonly="readonly" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="h_item">
+                <label asp-for="Address" class="mdl-chip__text"></label>
+                <input asp-for="Address" class="mdl-textfield__input" readonly="readonly" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="h_item">
+                <label asp-for="VipDatetime" class="mdl-chip__text"></label>
+                <input asp-for="VipDatetime" class="mdl-textfield__input" />
+                <span asp-validation-for="VipDatetime" class="text-danger"></span>
+            </div>
+
+            <div class="h_item">
+                <label asp-for="Vip" class="mdl-chip__text"></label>
+                <input id="Vip" name="Vip" type="checkbox" title="Aktif/Pasif" @(Model.Vip == 1 ? "value=\"true\" checked=\"true\"" : "value=\"false\"") />
+            </div>
+
+            <div class="h_item">
+                <label asp-for="Type" class="mdl-chip__text"></label>
+                <input id="Type" name="Type" type="checkbox" title="Admin/User" @(Model.Type == 1 ? "checked=\"true\"" : "value=\"false\"") />
+            </div>
+
+            <div class="h_item">
+                <label asp-for="Status" class="mdl-chip__text"></label>
+                <input id="Status" name="Status" type="checkbox" title="Aktif/Beklemede" @(Model.Status == 1 ? "checked=\"true\"" : "value=\"false\"") />
+            </div>
+
+            <div class="form-group">
+                @if (Model.Type == 1)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">Admin</span>
+                    </span>
+                }
+                @if (Model.Type == 2)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">User</span>
+                    </span>
+                }
+
+                @if (Model.Status == 0)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">Off</span>
+                    </span>
+                }
+                @if (Model.Status == 1)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">On</span>
+                    </span>
+                }
+            </div>
+
+            <div class="h_item">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>

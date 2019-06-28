@@ -1,0 +1,62 @@
+﻿@model IEnumerable<QuestionBank.Models.QuestionsTests>
+
+@{
+    ViewData["Title"] = "Questions_Test";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+<div class="actions">
+    <a asp-action="Lectures_Create">Questions Tests</a>
+</div>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Datetime)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datetime)
+            </td>
+            <td>
+                @if (item.Status == 1)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">On</span>
+                    </span>
+                }
+                @if (item.Status == 0)
+                {
+                    <span class="mdl-chip">
+                        <span class="mdl-chip__text">Off</span>
+                    </span>
+                }
+            </td>
+            <td>
+                <button type="button" class="mdl-chip" style="background-color:orange;">
+                    <span class="mdl-chip__text"><a asp-action="Questions_Test_Details" asp-route-id="@item.Id">Detail</a></span>
+                </button>
+                <button type="button" class="mdl-chip">
+                    <span class="mdl-chip__text"><a asp-action="Questions_Test_Delete" asp-route-id="@item.Id">Delete</a></span>
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

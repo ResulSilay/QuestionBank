@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/w3.css" rel="stylesheet" />
+    <link href="~/css/material.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Carter+One|Faster+One|Michroma|Monoton|Viga" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Chewy|Coming+Soon|Faster+One|Proza+Libre|Sniglet|Sriracha" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Mountains+of+Christmas|Nova+Oval|Nova+Script|Playball|Sail|Srisakdi" rel="stylesheet">
+    <script src="~/js/jquery.js"></script>
+    <link href="~/css/question.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="w3-content" style="max-width:2000px">
+        <div class="header_layout">
+            <div>
+                <div style="padding-left:100px;padding-right:100px; padding-top:35px;">
+                    <a class="w3-bar-item w3-button logo_layout">Q B</a>
+                    <a href="~/" class="w3-bar-item w3-button menu">Home</a>
+                    <a href="~/Lectures" class="w3-bar-item w3-button menu">Lectures</a>
+                    <a href="~/Index" class="w3-bar-item w3-button menu">About</a>
+                    <a href="~/Index" class="w3-bar-item w3-button w3-hide-small menu">Contact</a>
+                    <div style="float:right">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+      
+
+                            <button class="mdl-chip mdl-chip--contact" onclick="window.location='../Connect/';">
+                                <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white" style="background-color:#8181c7 !important">O</span>
+                                <span class="mdl-chip__text">@User.Claims.Where(c => c.Type == System.Security.Claims.ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()</span>
+                            </button>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <input id="Submit1" type="submit" value="Giriş Yap" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:white;color:black;margin-right:10px; border-radius: 20px;" onclick="window.location='../Connect/';" />
+
+                            <input id="Submit1" type="submit" value="Kayıt Ol" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#5a5a5d;color:white;  border-radius: 20px;" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="layout">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

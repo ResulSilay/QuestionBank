@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<div class="layout_login">
+<div class="box">
+    <div style="padding:20px;background-color:white;text-align:center;color:black;padding-bottom: 0px;padding-top: 55px;">
+        <div class="logo">Q B</div>
+        <h6 style="padding-top:10px;">
+            <br />
+            Profile
+        </h6>
+
+        <div class="warning">
+            @ViewBag.warningMessage
+        </div>
+    </div>
+    <div style="padding:35px;">
+        @using (Html.BeginForm("Profile", "Connect", FormMethod.Post, null))
+        {
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="username" readonly="readonly" value="@User.Claims.Where(c => c.Type == System.Security.Claims.ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()">
+            <label class="mdl-textfield__label" for="sample3"></label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" name="password" id="password">
+            <label class="mdl-textfield__label" for="sample3">Şifre</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" name="password_r">
+            <label class="mdl-textfield__label" for="sample3">Şifre tekrar</label>
+        </div>
+
+        <div>
+            <br />
+            <input id="Submit1" type="submit" value="KAYDET" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" />
+        </div>
+        }
+    </div>
+
+    <hr />
+    <div class="box-2">
+        <div>
+            <input id="Submit2" type="submit" value="panele dön" class="mdl-button" style="text-transform: initial;" onclick="window.location.href='/Connect/Register'" />
+        </div>
+    </div>
+</div>
+</div>
+

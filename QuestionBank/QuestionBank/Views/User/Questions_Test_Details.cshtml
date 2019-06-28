@@ -1,0 +1,61 @@
+﻿@model QuestionBank.Models.QuestionsTests
+
+@{
+    ViewData["Title"] = "Questions_Test_Details";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+<div class="actions">
+    <a asp-action="Lectures_Create">Questions Detail</a>
+</div>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.A)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.A)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.B)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.B)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.D)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.D)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.E)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.E)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Result)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Result)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datetime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datetime)
+        </dd>
+    </dl>
+</div>

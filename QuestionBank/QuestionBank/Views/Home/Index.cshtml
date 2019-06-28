@@ -1,0 +1,148 @@
+﻿@model IEnumerable<QuestionBank.Models.Lectures>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question Bank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/material.min.css" rel="stylesheet" />
+    <link href="~/css/w3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Carter+One|Faster+One|Michroma|Monoton|Viga" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Chewy|Coming+Soon|Faster+One|Proza+Libre|Sniglet|Sriracha" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Mountains+of+Christmas|Nova+Oval|Nova+Script|Playball|Sail|Srisakdi" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Lato", sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px">
+        <div class="mySlides w3-display-container w3-center">
+            <div class="slider">
+                <div>
+                    <img src="~/images/banner_1.png" style="display:none">
+                </div>
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small" style="top: 10%;">
+                    <div class="logo">Q B</div><br />
+                    <p><b class="title">"birçok kategoride yüzlerce soru seni bekliyor"</b></p><br />
+                                                                                               <form action="Search" method="get">
+                                                                                                   <div>
+
+                                                                                                       <input name="search_key" id="search_key" class="search" type="text" placeholder="soru arayın..."/>
+                                                                                                       <input type="submit" value="Ara" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:white;color:black;margin-right:10px; border-radius: 20px; display:none" />
+                                                                                                   </div>
+
+                                                                                               </form>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <input id="Submit1" type="submit" value="@User.Claims.Where(c => c.Type == System.Security.Claims.ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:white;color:black;margin-right:10px; border-radius: 20px;" onclick="window.location='Connect/';" />
+                    }
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <input id="Submit1" type="submit" value="Giriş Yap" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:white;color:black;margin-right:10px; border-radius: 20px;" onclick="window.location='Connect/';" />
+
+                        <input id="Submit1" type="submit" value="Kayıt Ol" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color:#5a5a5d;color:white;  border-radius: 20px;" onclick="window.location='Connect/Register';" />
+                    }
+
+                </div>
+            </div>
+        </div>
+        <div class="lectures">
+            <div class="middle">
+                <div class="m_title">dersler</div>
+                @foreach (var item in Model)
+                {
+                    <div class="box">
+                        <a asp-action="Subjects" class="mdl-chip__text" asp-route-id="@item.Id">
+                            <img src="~/images/lectures/default.svg" width="40" height="40">
+                            <div style="text-align:center">@Html.DisplayFor(modelItem => item.Name)</div>
+                            <span class="mdl-chip" style="display:none">
+                                <span class="mdl-chip__text">@Html.DisplayFor(modelItem => item.Name)</span>
+                            </span>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="library">
+            <span>
+                <div class="m_title">kütüphane</div>
+                <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px; 
+    border-radius: 5px;" id="band">
+                    <p class="w3-justify">
+                        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+            </span>
+        </div>
+
+    </div>
+
+    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge">
+        <p class="w3-medium">tüm hakları saklıdır. @@2019</a></p>
+    </footer>
+    <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000);
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

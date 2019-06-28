@@ -1,0 +1,40 @@
+﻿.q_title {
+    padding: 25px;
+    border-bottom: 1px solid #dedede;
+    float: left;
+    width: 100%;
+    margin-bottom:15px;
+}
+
+.q_content{
+    padding:25px;
+    margin-bottom:15px;
+}
+
+    .q_content div{
+        padding-bottom:5px;
+    }
+
+    .q_item {
+        padding: 10px;
+    }
+
+.s_title {
+    padding: 25px;
+    border-bottom: 1px solid #dedede;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.s_content {
+    padding: 25px;
+    margin-bottom: 15px;
+}
+
+    .s_content div {
+        padding-bottom: 5px;
+    }
+
+.s_item {
+    padding: 10px;
+}

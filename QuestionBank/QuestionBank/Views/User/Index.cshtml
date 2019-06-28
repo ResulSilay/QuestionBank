@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_User.cshtml";
+}
+
+<head>
+    <style>
+        td {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<div class="actions">
+    <a asp-action="Lectures_Create">Statistics</a>
+</div>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>
+                    Questions Test
+                </td>
+                <td>
+                 All/On/Off questions.
+                </td>
+                <td style="text-align:right">
+                    <span class="mdl-chip mdl-chip--contact">
+                        <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">@ViewBag.count_questions_test_all</span>
+                        <span class="mdl-chip__text">All</span>
+                    </span>
+                    <span class="mdl-chip mdl-chip--contact">
+                        <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">@ViewBag.count_questions_test_on</span>
+                        <span class="mdl-chip__text">On</span>
+                    </span>
+                    <span class="mdl-chip mdl-chip--contact">
+                        <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">@ViewBag.count_questions_test_off</span>
+                        <span class="mdl-chip__text">Off</span>
+                    </span>
+                </td>
+            </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<div class="layout_login">
+<div class="box">
+    <div style="padding:20px;background-color:white;text-align:center;color:black;padding-bottom: 0px;padding-top: 55px;">
+        <div class="logo">Q B</div>
+        <h6 style="padding-top:10px;">
+            <br />
+            Question Bank Login
+        </h6>
+
+        <div class="warning">
+            @ViewBag.warningMessage
+        </div>
+    </div>
+    <div style="padding:35px;">
+        @using (Html.BeginForm("Login", "Connect", FormMethod.Post, null))
+        {
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="username">
+                <label class="mdl-textfield__label" for="sample3">Kullanıcı Adı</label>
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="password" name="password">
+                <label class="mdl-textfield__label" for="sample3">Şifre</label>
+            </div>
+
+            <div>
+                <br />
+                <input id="Submit1" type="submit" value="GİRİŞ" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" />
+            </div>
+        }
+    </div>
+
+    <hr />
+    <div class="box-2">
+        <div>
+            <input id="Submit2" type="submit" value="kayıt Olun" class="mdl-button" style="text-transform: initial;" onclick="window.location.href='/Connect/Register'" />
+        </div>
+        <div>
+            <input id="Submit2" type="submit" value="şifrenizi mi unuttunuz." class="mdl-button" style="text-transform: initial;" onclick="window.location.href='/Connect/Register'" />
+        </div>
+    </div>
+</div>
+</div>
+

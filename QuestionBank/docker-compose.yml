@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  questionbank:
+    image: ${DOCKER_REGISTRY}questionbank
+    build:
+      context: .
+      dockerfile: QuestionBank\Dockerfile

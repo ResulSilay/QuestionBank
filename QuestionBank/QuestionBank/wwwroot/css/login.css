@@ -1,0 +1,90 @@
+﻿body {
+    /*background-color: #f1f1f1 !important;*/
+    background: repeating-radial-gradient(circle, white, rgba(241, 241, 241, 0.34) 30px, rgb(255, 255, 255) 1px, rgb(255, 255, 255) 1px);
+}
+
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 45px;
+}
+
+.layout_login {
+    margin: 0 auto;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+    width: 450px;
+}
+
+.layout_register {
+    margin: 0 auto;
+    position: absolute;
+    top: 7%;
+    left: 0;
+    right: 0;
+    width: 450px;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 0 5px 35px rgba(50, 50, 93, 0.1), 0 0px 5px rgba(0, 0, 0, 0.07);
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-bottom: 10px;
+    font-family: sans-serif;
+}
+
+
+
+input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.mdl-textfield {
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+.box-2 {
+    background-color: rgba(243, 243, 243, 0.46);
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+
+select {
+    width: 100%;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #b5b5b5;
+}
+
+.label {
+    color: black;
+    font-size: 13px;
+    display: block;
+}
+
+.warning {
+    color: red;
+}
